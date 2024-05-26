@@ -21,7 +21,9 @@ public class StandAloneTest {
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://rahulshettyacademy.com/client/");
+                //Implicit wait
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                  
 		
 		//Creating LandingPage class object and sending driver as an argument
 		LandingPage landingpage=new LandingPage(driver);
