@@ -1,4 +1,4 @@
-package AutomationTesting.Tests;
+ package AutomationTesting.Tests;
 
 import java.time.Duration;
 import java.util.List;
@@ -31,6 +31,7 @@ public class StandAloneTest {
 		driver.findElement(By.id("userPassword")).sendKeys("Password@123");
 		driver.findElement(By.id("login")).click();
 		
+                //explicit wait
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".mb-3")));
 		
